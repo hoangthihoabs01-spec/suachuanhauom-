@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sữa Chua Nhà Ươm - Vị Lành Ươm Mầm Tự Nhiên</title>
+  <meta name="description" content="Sữa chua thủ công Nhà Ươm: Sữa chua nếp cẩm, sữa chua cốm, sữa chua uống nguyên chất thơm mát, không chất bảo quản.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #c25e36;
+      --primary-dark: #9e4624;
+      --primary-light: #fbeee8;
+      --accent-green: #5a7d4a;
+      --accent-green-light: #eaf1e7;
+      --accent-purple: #4d2d44;
+      --accent-purple-light: #f5edf3;
+      --bg-cream: #faf7f2;
+      --surface: #ffffff;
+      --text-main: #2b2623;
+      --text-muted: #6b635e;
+      --border: #ebdcd4;
+      --shadow-sm: 0 4px 12px rgba(90, 60, 40, 0.06);
+      --shadow-md: 0 10px 24px rgba(90, 60, 40, 0.09);
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, .brand-font {
+      font-family: 'Playfair Display', serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 74px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .logo-badge {
+      background: var(--primary);
+      color: #fff;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn-header {
+      background: var(--primary);
+      color: #fff !important;
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(194, 94, 54, 0.3);
+    }
+
+    .btn-header:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 70px 0 60px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: 3.1rem;
+      line-height: 1.2;
+      color: var(--text-main);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+      font-style: italic;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      padding: 13px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(194, 94, 54, 0.35);
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text-main);
+      padding: 13px 26px;
+      border-radius: 30px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .btn-secondary:hover {
+      background: #f4ede6;
+    }
+
+    .hero-card {
+      position: relative;
+    }
+
+    .hero-image-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      background: #eed8cd;
+      aspect-ratio: 4/3.8;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .floating-badge {
+      position: absolute;
+      bottom: -15px;
+      left: -15px;
+      background: var(--surface);
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .floating-badge .icon {
+      font-size: 1.8rem;
+    }
+
+    .floating-badge strong {
+      display: block;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .floating-badge span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* STORY / ABOUT */
+    .story-section {
+      padding: 80px 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 50px;
+    }
+
+    .section-badge {
+      color: var(--accent-green);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .section-header h2 {
+      font-size: 2.3rem;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .value-card {
+      background: var(--bg-cream);
+      padding: 30px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .value-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .icon-rice { background: var(--accent-purple-light); color: var(--accent-purple); }
+    .icon-leaf { background: var(--accent-green-light); color: var(--accent-green); }
+    .icon-milk { background: var(--primary-light); color: var(--primary); }
+
+    .value-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* MENU SECTION */
+    .menu-section {
+      padding: 80px 0;
+    }
+
+    .menu-filters {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 10px 22px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 24px;
+    }
+
+    .menu-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .menu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-img-wrap {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      background: #f0e6e0;
+    }
+
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .menu-card:hover .card-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .tag-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.95);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-body h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .price {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+    }
+
+    .btn-add-order {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border: none;
+      padding: 8px 14px;
+      border-radius: 18px;
+      font-weight: 600;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-add-order:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* SPACE SECTION */
+    .space-section {
+      padding: 80px 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 210px 210px;
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item.large {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .space-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 20px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    /* CART / FLOATING BAR */
+    .floating-cart {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 50px;
+      box-shadow: 0 8px 24px rgba(194, 94, 54, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      z-index: 99;
+      transition: var(--transition);
+    }
+
+    .floating-cart:hover {
+      background: var(--primary-dark);
+      transform: scale(1.05);
+    }
+
+    .cart-badge {
+      background: #fff;
+      color: var(--primary);
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #231e1c;
+      color: #e4dad4;
+      padding: 70px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand h3 {
+      color: #fff;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: #a89f9a;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      color: #b0a7a2;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid #36302e;
+      font-size: 0.82rem;
+      color: #8c827d;
+    }
+
+    /* MODAL CART */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--surface);
+      width: 90%;
+      max-width: 480px;
+      border-radius: var(--radius-md);
+      padding: 26px;
+      box-shadow: var(--shadow-md);
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    .modal-header h3 {
+      font-size: 1.3rem;
+      color: var(--text-main);
+    }
+
+    .close-modal {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .cart-items-list {
+      overflow-y: auto;
+      max-height: 280px;
+      margin-bottom: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: 0.92rem;
+    }
+
+    .cart-total-box {
+      padding: 14px;
+      background: var(--bg-cream);
+      border-radius: var(--radius-sm);
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+
+    .btn-zalo-submit {
+      width: 100%;
+      background: #0068ff;
+      color: #fff;
+      padding: 13px;
+      border-radius: 30px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-zalo-submit:hover {
+      background: #0056d6;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .gallery-item.large {
+        grid-column: 1 / 3;
+        height: 260px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-badge">Ư</span>
+        <span>Nhà Ươm</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#ve-chung-toi">Về Nhà Ươm</a></li>
+        <li><a href="#thuc-don">Thực đơn & Giá</a></li>
+        <li><a href="#khong-gian">Không gian</a></li>
+        <li><a href="#lien-he">Liên hệ</a></li>
+      </ul>
+      <a href="#thuc-don" class="btn-header">
+        <span>Đặt Món Nhanh</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">✨ Sữa Chua Thủ Công Lên Men Tự Nhiên</div>
+        <h1>Gói trọn vị lành, <span>ươm từng khoảnh khắc</span> ấm áp</h1>
+        <p>Thưởng thức hũ sữa chua nếp cẩm dẻo bùi Tây Bắc, đượm hương cốm non mùa thu và vị thanh mát nguyên bản từ sữa tươi organic tuyển chọn.</p>
+        <div class="hero-actions">
+          <a href="#thuc-don" class="btn-primary">Khám Phá Menu & Giá</a>
+          <a href="#khong-gian" class="btn-secondary">Ghé Thăm Quán</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-image-wrap">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1000&q=80" alt="Sữa chua nếp cẩm thơm ngon Nhà Ươm">
+        </div>
+        <div class="floating-badge">
+          <span class="icon">🍶</span>
+          <div>
+            <strong>100% Men Sống Thuần Khiết</strong>
+            <span>Ủ nhiệt ấm 12 tiếng mỗi sớm mai</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section id="ve-chung-toi" class="story-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Câu Chuyện Của Chúng Tôi</span>
+        <h2>Nhà Ươm - Nơi hạt mầm thơm lành nở rộ</h2>
+        <p>Chúng mình tin rằng một món tráng miệng ngon không chỉ thoả mãn vị giác mà còn sưởi ấm tâm hồn bạn sau những bộn bề thường nhật.</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon icon-rice">🌾</div>
+          <h3>Nếp Cẩm Rừng Dẻo Thơm</h3>
+          <p>Nếp cẩm chuẩn vùng cao được ninh mềm dẻo, đượm vị mật mía tự nhiên, cân bằng vị giác cùng sữa chua mịn màng.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon icon-leaf">🍃</div>
+          <h3>Hương Cốm Mộc Non</h3>
+          <p>Từng hạt cốm dẻo thơm ngát được xào khéo léo giữ trọn màu xanh non mướt mắt và hương thơm thanh tao của đất trời.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon icon-milk">🥛</div>
+          <h3>Sữa Chua Uống Thanh Khiết</h3>
+          <p>Dòng sữa chua uống mát lành, hỗ trợ tiêu hóa với các vị trái cây tươi thật: chanh dây thơm nồng, dâu tây mọng đỏ và xoài nhiệt đới.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="thuc-don" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Thực Đơn & Bảng Giá</span>
+        <h2>Vị Ngon Chọn Lọc Tại Nhà Ươm</h2>
+        <p>Mỗi món được chuẩn bị tươi mới mỗi ngày với nguyên liệu sạch lành nhất.</p>
+      </div>
+
+      <div class="menu-filters">
+        <button class="filter-btn active" onclick="filterMenu('all')">Tất Cả Món</button>
+        <button class="filter-btn" onclick="filterMenu('nep-cam')">Sữa Chua Nếp Cẩm</button>
+        <button class="filter-btn" onclick="filterMenu('com')">Sữa Chua Cốm Non</button>
+        <button class="filter-btn" onclick="filterMenu('uong')">Sữa Chua Uống</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Item 1 -->
+        <div class="menu-card" data-category="nep-cam">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571212515416-fef01fc43637?auto=format&fit=crop&w=600&q=80" alt="Sữa chua nếp cẩm truyền thống">
+            <span class="tag-badge">Best Seller</span>
+          </div>
+          <div class="card-body">
+            <h3>Sữa Chua Nếp Cẩm Dẻo</h3>
+            <p class="card-desc">Sữa chua men sống béo ngậy kết hợp nếp cẩm nương Tây Bắc ủ dẻo ngọt dịu.</p>
+            <div class="card-footer">
+              <span class="price">28.000 đ</span>
+              <button class="btn-add-order" onclick="addToCart('Sữa Chua Nếp Cẩm Dẻo', 28000)">+ Chọn món</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="menu-card" data-category="com">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Sữa chua cốm non">
+            <span class="tag-badge">Đặc Sản</span>
+          </div>
+          <div class="card-body">
+            <h3>Sữa Chua Cốm Xanh Mộc</h3>
+            <p class="card-desc">Cốm tươi mùa thu dẻo ngọt bùi, phủ trên lớp sữa chua mịn mượt thơm hương hoa bưởi.</p>
+            <div class="card-footer">
+              <span class="price">32.000 đ</span>
+              <button class="btn-add-order" onclick="addToCart('Sữa Chua Cốm Xanh Mộc', 32000)">+ Chọn món</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="menu-card" data-category="nep-cam">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=600&q=80" alt="Sữa chua nếp cẩm cốt dừa">
+            <span class="tag-badge">Được Yêu Thích</span>
+          </div>
+          <div class="card-body">
+            <h3>Sữa Chua Nếp Cẩm Nước Cốt Dừa</h3>
+            <p class="card-desc">Nếp cẩm sánh quyện thêm sốt nước cốt dừa Bến Tre ép tươi béo ngậy đặc biệt.</p>
+            <div class="card-footer">
+              <span class="price">35.000 đ</span>
+              <button class="btn-add-order" onclick="addToCart('Sữa Chua Nếp Cẩm Cốt Dừa', 35000)">+ Chọn món</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="menu-card" data-category="com">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=600&q=80" alt="Sữa chua cốm sen dừa">
+            <span class="tag-badge">Mới</span>
+          </div>
+          <div class="card-body">
+            <h3>Sữa Chua Cốm Hạt Sen Ninh Nhừ</h3>
+            <p class="card-desc">Cốm dẻo thơm kết hợp hạt sen Huế bở bùi, thanh mát dưỡng nhan.</p>
+            <div class="card-footer">
+              <span class="price">38.000 đ</span>
+              <button class="btn-add-order" onclick="addToCart('Sữa Chua Cốm Sen', 38000)">+ Chọn món</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="menu-card" data-category="uong">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80" alt="Sữa chua uống chanh dây">
+            <span class="tag-badge">Chai 330ml</span>
+          </div>
+          <div class="card-body">
+            <h3>Sữa Chua Uống Chanh Dây Tươi</h3>
+            <p class="card-desc">Chua chua thanh ngọt từ cốt chanh dây Đà Lạt tươi, giải nhiệt ngày hè cực đỉnh.</p>
+            <div class="card-footer">
+              <span class="price">30.000 đ</span>
+              <button class="btn-add-order" onclick="addToCart('Sữa Chua Uống Chanh Dây', 30000)">+ Chọn món</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="menu-card" data-category="uong">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=600&q=80" alt="Sữa chua uống dâu tây">
+            <span class="tag-badge">Chai 330ml</span>
+          </div>
+          <div class="card-body">
+            <h3>Sữa Chua Uống Dâu Tây Mộc</h3>
+            <p class="card-desc">Sữa chua uống sánh mịn quyện mứt dâu tươi dầm tay nguyên chất, ngọt thanh dễ chịu.</p>
+            <div class="card-footer">
+              <span class="price">35.000 đ</span>
+              <button class="btn-add-order" onclick="addToCart('Sữa Chua Uống Dâu Tây', 35000)">+ Chọn món</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPACE SECTION -->
+  <section id="khong-gian" class="space-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Ghé Chơi Nhà Ươm</span>
+        <h2>Không Gian Ấm Áp & An Yên</h2>
+        <p>Bàn gỗ mộc, ô cửa kính đón nắng mai và hương hoa cỏ nhẹ nhàng. Chốn hẹn hò đọc sách hay chuyện trò cùng người thân thương.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80" alt="Góc ấm cúng tại Nhà Ươm">
+          <div class="space-caption">Góc ngồi bên khung cửa sổ ngập tràn nắng vàng</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80" alt="Bàn trà gỗ mộc">
+          <div class="space-caption">Bàn gỗ mộc & chậu cây xanh</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80" alt="Quầy ủ sữa chua thơm nồng">
+          <div class="space-caption">Quầy ủ sữa chua ấm cúng</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Không gian thư giãn">
+          <div class="space-caption">Âm nhạc lofi nhẹ nhàng êm tai</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Hũ sữa chua tươi">
+          <div class="space-caption">Thưởng thức trọn vẹn vị mộc mạc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING CART BUTTON -->
+  <div class="floating-cart" onclick="toggleCartModal()">
+    <span>🛒 Giỏ Hàng</span>
+    <span class="cart-badge" id="cartCount">0</span>
+  </div>
+
+  <!-- MODAL CART -->
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Đơn Hàng Nhà Ươm</h3>
+        <button class="close-modal" onclick="toggleCartModal()">✕</button>
+      </div>
+      <div class="cart-items-list" id="cartList">
+        <p style="text-align: center; color: var(--text-muted); padding: 20px;">Chị chưa chọn món nào ạ. Hãy bấm "+ Chọn món" ở thực đơn nhé!</p>
+      </div>
+      <div class="cart-total-box">
+        <span>Tổng thanh toán:</span>
+        <span id="cartTotal" style="color: var(--primary);">0 đ</span>
+      </div>
+      <button class="btn-zalo-submit" onclick="sendOrderZalo()">
+        <span>💬 Đặt Ngay Qua Zalo / Hotline</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="lien-he">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="brand-font">SỮA CHUA NHÀ ƯƠM</h3>
+          <p>Mỗi hũ sữa chua là một tấm lòng gửi trao vị thanh lành từ nguyên liệu quê nhà. Hân hạnh được đón tiếp và phục vụ quý khách.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ghé Thăm Chúng Mình</h4>
+          <ul>
+            <li>📍 Địa chỉ: [Số 18 Ngõ Bình Minh, Phố Nhã, Hà Nội]</li>
+            <li>⏰ Giờ mở cửa: 08:00 - 22:30 hàng ngày</li>
+            <li>📞 Hotline/Zalo: 0987.654.321</li>
+            <li>🛵 Ship nội thành hỏa tốc đảm bảo độ mát lạnh</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ươm Mầm Yêu Thương</h4>
+          <ul>
+            <li>✨ Đặt tiệc trà, hội thảo & quà tặng công ty</li>
+            <li>🌱 Cam kết không hương liệu nhân tạo</li>
+            <li>🎁 Hũ thủy tinh tái sử dụng thân thiện môi trường</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sữa Chua Nhà Ươm. Đã đăng ký bản quyền. Thiết kế ấm áp & mộc mạc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // Bộ lọc thực đơn
+    function filterMenu(category) {
+      const cards = document.querySelectorAll('.menu-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Quản lý giỏ hàng
+    let cart = [];
+
+    function addToCart(name, price) {
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      updateCartUI();
+      // Hiệu ứng phản hồi nhẹ
+      const cartBtn = document.querySelector('.floating-cart');
+      cartBtn.style.transform = 'scale(1.15)';
+      setTimeout(() => cartBtn.style.transform = 'scale(1)', 200);
+    }
+
+    function updateCartUI() {
+      const countEl = document.getElementById('cartCount');
+      const listEl = document.getElementById('cartList');
+      const totalEl = document.getElementById('cartTotal');
+
+      let totalQty = 0;
+      let totalPrice = 0;
+
+      if (cart.length === 0) {
+        listEl.innerHTML = '<p style="text-align: center; color: var(--text-muted); padding: 20px;">Chị chưa chọn món nào ạ. Hãy bấm "+ Chọn món" ở thực đơn nhé!</p>';
+      } else {
+        listEl.innerHTML = '';
+        cart.forEach((item, index) => {
+          totalQty += item.qty;
+          totalPrice += item.price * item.qty;
+
+          const itemRow = document.createElement('div');
+          itemRow.className = 'cart-item';
+          itemRow.innerHTML = `
+            <div>
+              <strong>${item.name}</strong><br>
+              <small style="color: #888;">${item.price.toLocaleString('vi-VN')} đ x ${item.qty}</small>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-weight: 600; color: var(--primary);">${(item.price * item.qty).toLocaleString('vi-VN')} đ</span>
+              <button onclick="removeItem(${index})" style="background: none; border: none; color: #cc3333; cursor: pointer; font-size: 1.1rem;">×</button>
+            </div>
+          `;
+          listEl.appendChild(itemRow);
+        });
+      }
+
+      countEl.innerText = totalQty;
+      totalEl.innerText = totalPrice.toLocaleString('vi-VN') + ' đ';
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function toggleCartModal() {
+      const modal = document.getElementById('cartModal');
+      modal.classList.toggle('active');
+    }
+
+    function sendOrderZalo() {
+      if (cart.length === 0) {
+        alert('Chị hãy chọn ít nhất 1 món để Nhà Ươm chuẩn bị nhé!');
+        return;
+      }
+      let orderMsg = "Xin chào Sữa Chua Nhà Ươm, mình muốn đặt hàng:
+";
+      let total = 0;
+      cart.forEach(item => {
+        orderMsg += `- ${item.name} x ${item.qty} = ${(item.price * item.qty).toLocaleString('vi-VN')}đ
+`;
+        total += item.price * item.qty;
+      });
+      orderMsg += `Tổng cộng: ${total.toLocaleString('vi-VN')}đ. Nhờ quán xác nhận giúp mình nhé!`;
+
+      // Copy nội dung vào clipboard và mở hướng dẫn
+      navigator.clipboard.writeText(orderMsg).then(() => {
+        alert("Đã sao chép danh sách món vào bộ nhớ tạm!
+Quán sẽ mở kết nối Zalo ngay bây giờ.");
+        window.open("https://zalo.me/0987654321", "_blank");
+      }).catch(() => {
+        window.open("https://zalo.me/0987654321", "_blank");
+      });
+    }
+
+    // Đóng popup khi click ra ngoài
+    window.onclick = function(event) {
+      const modal = document.getElementById('cartModal');
+      if (event.target === modal) {
+        modal.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>
